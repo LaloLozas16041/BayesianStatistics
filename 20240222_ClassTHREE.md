@@ -43,7 +43,7 @@ $$\int_{\Theta} k P(X|\Theta)P(\Theta)d\Theta = 1$$
 
 $$\sum_{i \in J} k P(X|\Theta_i)P(\Theta_i)d\Theta = 1$$
 
-Ejemplo: Si $X \sim \text{Bernoulli}(\theta)$, $\theta \sim \text{Beta}(\alpha, \beta)$, entonces:
+Ejemplo: Si $X|\theta \sim \text{Bernoulli}(\theta)$, $\theta \sim \text{Beta}(\alpha, \beta)$, entonces:
 
 $$P(\theta|X) \propto P(X|\theta)P(\theta) \propto \theta^X(1-\theta)^{1-X} \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
 
@@ -51,25 +51,6 @@ $$\propto \theta^{X+\alpha-1}(1-\theta)^{\beta-X+\beta-1}$$
 
 $$\therefore \theta|X \sim \text{Beta}(X+\alpha, \beta-X+\beta)$$
 
-
-
 ## Distribución Dirichlet
 
-Sea el vector aleatorio $x = (x_1, ..., x_k) $se distribuye Dirichlet con parámetros $\alpha = (\alpha_1, ..., \alpha_k) $, $x > 0 $, $k > 1 $, $\sum x_i = 1 $, si la densidad es de la forma
-
-$f(x|\alpha) = \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)}x_1^{\alpha_1-1}...x_k^{\alpha_k-1} $
-
 ## Distribución Multinomial
-
-Sea el vector aleatorio $r = (x_1, ..., x_k) $con $x $es el número de veces que da el resultado $k $-ésimo en $n $sucesos, entonces
-
-$P(x_1, ..., x_k|n) = \frac{n!}{x_1!...x_k!}\alpha_1^{x_1}... \alpha_k^{x_k} \text{, }\sum_{i} \alpha_i = 1, \sum_{i} x_i = n $
-
-Si $x_i \sim $Multinomial y $(\alpha_1, ..., \alpha_k) \sim $Dirichlet con parámetros $(\alpha_1, ..., \alpha_k) $, entonces la observación $x = (x_1, ..., x_k)$
-
-$P(x|\alpha) = \frac{n!}{x_1!...x_k!}\alpha_1^{x_1}... \alpha_k^{x_k} \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)} $
-
-$\alpha_1^{x_1+\alpha_1-1}... \alpha_k^{x_k+\alpha_k-1} $
-
-$\therefore \alpha_1:x_1, ..., \alpha_k:x_k \sim \text{Dirichlet con parámetros} (x_1+\alpha_1, ..., x_k+\alpha_k) $
-
