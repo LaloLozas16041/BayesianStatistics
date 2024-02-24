@@ -37,15 +37,21 @@ $$ P(\theta|X) \propto P(X|\theta)P(\theta) $$
 
 Por lo que para $P(\theta|X) = k P(X|\theta)P(\theta)$, donde $k \in R$ es tal que:
 
-$$\int_{\Theta} k P(X|\Theta)P(\Theta)d\Theta = 1$ ó $\sum_{i \in J} k P(X|\Theta_i)P(\Theta_i)d\Theta = 1$$
+$$\int_{\Theta} k P(X|\Theta)P(\Theta)d\Theta = 1$$
 
-Ejemplo: Si $X \sim \text{Beta}(\alpha, \beta)$, entonces
+ó
 
-$$P(\theta|X) \propto P(X|\theta)P(\theta) \propto \alpha^{x}\beta^{(1-x)}\frac{f(x)}{f(x|\alpha,\beta)} $$
+$$\sum_{i \in J} k P(X|\Theta_i)P(\Theta_i)d\Theta = 1$$
 
-$$\alpha^{x}\beta^{(1-x)} * \alpha^{*\alpha-1}\beta^{*\beta-1} $$
+Ejemplo: Si $X \sim \text{Bernoulli}(\theta)$, $\theta \sim \text{Beta}(\alpha, \beta)$, entonces:
 
-$$\therefore \Theta|X \sim \text{Beta}(x+\alpha, \beta+x^*) $$
+$$P(\theta|X) \propto P(X|\theta)P(\theta) \propto \theta^X(1-\theta)^{1-X} \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha)\Gamma(\beta)} \theta^{\alpha-1}(1-\theta)^{\beta-1}$$
+
+$$\propto \theta^{X+\alpha-1}(1-\theta)^{\beta-X+\beta-1}$$
+
+$$\therefore \theta|X \sim \text{Beta}(X+\alpha, \beta-X+\beta)$$
+
+
 
 ## Distribución Dirichlet
 
