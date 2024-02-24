@@ -33,19 +33,19 @@ $$ P(H|E) = \frac{P(E|H)P(H)}{P(E)} \propto P(E|H)P(H) $$
 
 Para variables aleatorias $\theta$ y $X$
 
-$$ P(Q|X) \propto P(X|Q)P(Q) $$
+$$ P(\theta|X) \propto P(X|\theta)P(\theta) $$
 
 Por lo que para $P(\theta|X) = k P(X|\theta)P(\theta)$, donde $k \in R$ es tal que:
 
-$\int_{\Theta} k P(X|\Theta)P(\Theta)d\Theta = 1$ ó $\sum_{i \in J} k P(X|\Theta_i)P(\Theta_i)d\Theta = 1$
+$$\int_{\Theta} k P(X|\Theta)P(\Theta)d\Theta = 1$ ó $\sum_{i \in J} k P(X|\Theta_i)P(\Theta_i)d\Theta = 1$$
 
 Ejemplo: Si $X \sim \text{Beta}(\alpha, \beta)$, entonces
 
-$P(Q|X) \text{ o } P(X|Q)P(Q) \text{ es } \alpha^{x}\beta^{(1-x)}\frac{f(x)}{f(x|\alpha,\beta)} $
+$$P(\theta|X) \propto P(X|\theta)P(\theta) \propto \alpha^{x}\beta^{(1-x)}\frac{f(x)}{f(x|\alpha,\beta)} $$
 
-$\alpha^{x}\beta^{(1-x)} * \alpha^{*\alpha-1}\beta^{*\beta-1} $
+$$\alpha^{x}\beta^{(1-x)} * \alpha^{*\alpha-1}\beta^{*\beta-1} $$
 
-$\therefore Q|X \sim \text{Beta}(x+\alpha, \beta+x^*) $
+$$\therefore \Theta|X \sim \text{Beta}(x+\alpha, \beta+x^*) $$
 
 ## Distribución Dirichlet
 
