@@ -12,7 +12,7 @@ $$ P(X_1 = x_1, ..., X_k = x_k) = \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \thet
 
 Si $x|N, \theta_1, ..., \theta_k$ siguen una distribución multinomial y $(\theta_1, ..., \theta_k)$ siguen una distribución Dirichlet con parámetros $(\alpha_1, ..., \alpha_k)$, $\alpha_i > 0$, entonces para la observación $x = (x_1, ..., x_k)$:
 
-$$\theta | \x_1...x_k \propto \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)} \theta_1^{\alpha_1 - 1}... \theta_k^{\alpha_k - 1}$$
+$$\theta | x_1...x_k \propto \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)} \theta_1^{\alpha_1 - 1}... \theta_k^{\alpha_k - 1}$$
 
 $$\propto \theta_1^{x_1 + \alpha_1 - 1}... \theta_k^{x_k + \alpha_k - 1}$$
 
