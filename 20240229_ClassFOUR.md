@@ -8,13 +8,12 @@ $$ f(x|\alpha) = \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1) \cdot
 
 Sea el vector aleatorio $X = (x_1, ..., x_k)$ con $x_i$ el número de veces que se da el resultado $k$-ésimo en $N$ sucesos, entonces
 
-$$ P(X_1 = x_1, ..., X_k = x_k) = \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \text{ donde } \sum_{i=1}^{k} x_i = N $$
+$$ P(X_1 = x_1, ..., X_k = x_k) = \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \text{  donde  } \sum_{i=1}^{k} x_i = N $$
 
-Si $x_1, ..., x_k$ siguen una distribución multinomial y $(\theta_1, ..., \theta_k)$ siguen una distribución Dirichlet con parámetros $(\alpha_1, ..., \alpha_k)$, $\alpha_i > 0$, entonces para la observación $x = (x_1, ..., x_k)$:
+Si $x|N, \theta_1, ..., \theta_k$ siguen una distribución multinomial y $(\theta_1, ..., \theta_k)$ siguen una distribución Dirichlet con parámetros $(\alpha_1, ..., \alpha_k)$, $\alpha_i > 0$, entonces para la observación $x = (x_1, ..., x_k)$:
 
-$$\theta | r \propto \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)} \theta_1^{\alpha_1 - 1}... \theta_k^{\alpha_k - 1}$$
+$$\theta | \x_1...x_k \propto \frac{N!}{x_1!...x_k!} \theta_1^{x_1}... \theta_k^{x_k} \frac{\Gamma(\alpha_1 + ... + \alpha_k)}{\Gamma(\alpha_1)...\Gamma(\alpha_k)} \theta_1^{\alpha_1 - 1}... \theta_k^{\alpha_k - 1}$$
 
 $$\propto \theta_1^{x_1 + \alpha_1 - 1}... \theta_k^{x_k + \alpha_k - 1}$$
 
-$$\therefore r | \theta \sim \text{Dirichlet con parámetros} (x_1 + \alpha_1, ..., x_k + \alpha_k)$$
-
+$$\therefore \theta | x_1 ... x_k \sim \text{Dirichlet con parámetros} (x_1 + \alpha_1, ..., x_k + \alpha_k)$$
