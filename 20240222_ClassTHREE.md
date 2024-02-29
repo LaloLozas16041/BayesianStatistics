@@ -50,7 +50,3 @@ $$P(\theta|X) \propto P(X|\theta)P(\theta) \propto \theta^X(1-\theta)^{1-X} \fra
 $$\propto \theta^{X+\alpha-1}(1-\theta)^{\beta-X+\beta-1}$$
 
 $$\therefore \theta|X \sim \text{Beta}(X+\alpha, \beta-X+\beta)$$
-
-## Distribución Dirichlet
-
-## Distribución Multinomial
